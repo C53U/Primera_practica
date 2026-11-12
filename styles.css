@@ -3,22 +3,71 @@ body{
     background-color:bisque;
 }
 
-header{
-    background-color:burlywood;
-   display:flex;
-   justify-content:space-around;
+.grid_main{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-bottom: 20px;
 }
 
-.h1_main{
-    backgroun-color:grey;
-
+.div1{
+    background-color:rgb(64, 64, 118);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:1;
+    grid-row-end:3;
 }
 
-.f1{
-    display:flex;
-    align-items:center;
+.div2{
+    background-color:rgb(121, 80, 108);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start:1;
+    grid-row-end:2;
 }
 
-.h4_third{
-   margin: 15px;
+.div3{
+    background-color:rgb(112, 143, 99);
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start:1;
+    grid-row-end:2;
+}
+
+.div4{
+    background-color:rgb(99, 139, 143);
+     grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+
+/* Seccion wrapper */
+
+.wrapper{
+    display: grid;
+    background-color:cadetblue;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,50px);
+    grid-template-areas: "uno dos tres tres tres"
+                         "uno cuatro cuatro cuatro cuatro"
+                         "uno cuatro cuatro cuatro cuatro"
+                         "uno cuatro cuatro cuatro cuatro"
+                         "uno cuatro cuatro cuatro cuatro";
+} 
+
+.wrap1{
+    grid-area: uno;
+    background-color:rgb(83, 48, 96);
+}
+.wrap2{
+    grid-area: dos;
+    background-color:rgb(212, 134, 187);
+}
+.wrap3{
+     grid-area: tres;
+     background-color:rgb(158, 202, 104);
+}
+.wrap4{
+     grid-area: cuatro;
+     background-color:rgb(94, 166, 196);
 }
